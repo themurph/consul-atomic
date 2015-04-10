@@ -1,35 +1,38 @@
-# etcd-atomic
+# consul-atomic
 
-Building etcd server container for an atomic host:
+![Danger](http://farm2.static.flickr.com/1083/531670330_104df47a65.jpg)
+**This is not ready for use, it will not work, so please do not use it**
 
-```
-# git clone https://github.com/aveshagarwal/etcd-atomic
-# cd etcd-container
-# docker build --rm -t etcd .
-```
-
-Installing etcd container on atomic host:
+Building consul server container for an atomic host:
 
 ```
-#atomic install --name etcd1 etcd
+# git clone https://github.com/themurph/consul-atomic
+# cd consul-atomic
+# docker build --rm -t consul .
 ```
 
-Running etcd container on atomic host:
+Installing consul container on atomic host:
 
 ```
-#atomic run --name etcd1 etcd
+# atomic install --name consul01 consul
 ```
 
-Stopping etcd container on atomic host:
+Running consul container on atomic host:
 
 ```
-#atomic stop --name etcd1 etcd
+# atomic run --name consul01 consul
 ```
 
-Uninstalling etcd container on atomic host:
+Stopping consul container on atomic host:
 
 ```
-#atomic uninstall --name etcd1 etcd
+# atomic stop --name consul01 consul
+```
+
+Uninstalling consul container on atomic host:
+
+```
+# atomic uninstall --name consul01 consul
 ```
 
 
