@@ -2,8 +2,7 @@
 
 ![Danger](http://farm2.static.flickr.com/1083/531670330_104df47a65.jpg)
 
-photo by [Pulpolux !!!] "http://www.flickr.com/photos/pulpolux/531670330/"
-
+photo by [Pulpolux !!!](http://www.flickr.com/photos/pulpolux/531670330/)
 **This is not ready for use, it will not work, so please do not use it**
 
 Building consul server container for an atomic host:
