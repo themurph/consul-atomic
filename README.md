@@ -10,8 +10,14 @@ Building consul server container for an atomic host:
 ```
 # git clone https://github.com/themurph/consul-atomic
 # cd consul-atomic
-# docker build --rm -t consul .
+# docker build --rm=true -t consul-atomic .
 ```
+Testing build
+
+```
+# docker run -p 8500:8500 -p 53:53/udp --name atomic-node1 -h atomic-node1 -v /consul/data:/consul/data:rw -v /consul/config:/consul/config:rw atomic-consul -server -bootstrap -data-dir=/consul/data -ui-dir=/consul/ui
+```
+
 
 Installing consul container on atomic host:
 

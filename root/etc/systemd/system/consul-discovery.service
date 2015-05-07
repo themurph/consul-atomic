@@ -1,0 +1,12 @@
+i[Unit]
+Description=Consul Discovery
+BindsTo=consul@%i.service
+After=consul@%i.service
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/bin/sh -c "while true; do etcdctl mk /services/consul $COREOS_PUBLIC_IPV4 --ttl 60;/usr/bin/docker exec consul consul join $(etcdctl get /services/consul);sleep 45;done"
+ExecStop=/usr/bin/etcdctl rm /services/consul --with-value %H
+
+[X-Fleet]
+MachineOf=consul@%i.service
